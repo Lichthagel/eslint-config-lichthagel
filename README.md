@@ -6,6 +6,8 @@ Collection of eslint configs I use for my projects.
 
 `npm|yarn|pnpm i -D eslint lichthagel/eslint-config-lichthagel`
 
+This config brings along its own plugins using `@rushstack/eslint-patch`.
+
 ## Configurations
 
 ### base
@@ -14,17 +16,15 @@ Basic rules for any javascript project
 
 ```json
 {
-    "extends": ["lichthagel"]
+  "extends": ["lichthagel"]
 }
 ```
 
 ### node
 
-Supports node globals. Extends base.
-
 ```json
 {
-    "extends": ["lichthagel/node"]
+  "extends": ["lichthagel/node"]
 }
 ```
 
@@ -35,7 +35,7 @@ Supports node globals. Extends base.
 ```json
 {
     "extends": ["lichthagel/typescript"],
-    "parser": "@typescript-eslint/parser", // otherwise the VSCode-Extension will complain
+    "parser": "@typescript-eslint/parser",,
     "parserOptions": {
         "tsconfigRootDir": ".",
         "project": ["./tsconfig.json"]
@@ -45,10 +45,8 @@ Supports node globals. Extends base.
 
 ### react
 
-`npm|yarn|pnpm i -D eslint-plugin-react eslint-plugin-react-hooks`
-
 ```json
 {
-    "extends": ["lichthagel/react"]
+  "extends": ["lichthagel/react"]
 }
 ```
