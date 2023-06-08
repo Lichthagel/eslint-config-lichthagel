@@ -18,5 +18,8 @@ module.exports = {
     "n/prefer-global/url-search-params": "warn",
     "n/prefer-promises/dns": "warn",
     "n/prefer-promises/fs": "warn",
+
+    "n/no-missing-import": "off",
+    "n/no-missing-require": "off",
   },
 };
