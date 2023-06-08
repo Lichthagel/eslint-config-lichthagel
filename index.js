@@ -6,7 +6,12 @@ module.exports = {
     es2022: true,
   },
   plugins: ["import"],
-  extends: ["eslint:recommended", "plugin:import/recommended", "prettier"],
+  extends: [
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "plugin:promise/recommended",
+    "prettier",
+  ],
   settings: {
     "import/resolver": {
       node: {},
@@ -52,5 +57,7 @@ module.exports = {
 
     "no-tabs": ["error", { allowIndentationTabs: true }],
     "quotes": ["warn", "double"],
+
+    "promise/prefer-await-to-then": "warn",
   },
 };
