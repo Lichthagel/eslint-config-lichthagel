@@ -42,7 +42,10 @@ module.exports = {
     "no-var": "warn",
     "prefer-arrow-callback": "error",
     "prefer-const": "error",
-    "prefer-destructuring": "error",
+    "prefer-destructuring": [
+      "warn",
+      { AssignmentExpression: { array: false, object: false } },
+    ],
     "prefer-exponentiation-operator": "warn",
     "prefer-object-spread": "error",
     "prefer-promise-reject-errors": "warn",
