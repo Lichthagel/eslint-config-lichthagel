@@ -27,9 +27,7 @@ module.exports = {
       "warn",
       { assertionStyle: "as", objectLiteralTypeAssertions: "allow" },
     ],
-    "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
-    "@typescript-eslint/consistent-type-exports": "warn",
-    "@typescript-eslint/consistent-type-imports": "warn",
+    "@typescript-eslint/consistent-type-definitions": ["warn", "type"],
     "@typescript-eslint/default-param-last": "warn",
     "@typescript-eslint/explicit-member-accessibility": "error",
     "@typescript-eslint/method-signature-style": "warn",
@@ -41,7 +39,6 @@ module.exports = {
     "no-duplicate-imports": "off",
     "no-unused-vars": "off",
     "quotes": "off",
-    "@typescript-eslint/explicit-function-return-type": "error",
     "import/no-unresolved": "off",
   },
 };
