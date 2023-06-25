@@ -5,11 +5,12 @@ module.exports = {
   env: {
     es2022: true,
   },
-  plugins: ["import"],
+  plugins: ["import", "unicorn"],
   extends: [
     "eslint:recommended",
     "plugin:import/recommended",
     "plugin:promise/recommended",
+    "plugin:unicorn/recommended",
     "prettier",
   ],
   settings: {
@@ -62,5 +63,16 @@ module.exports = {
     "quotes": ["warn", "double"],
 
     "promise/prefer-await-to-then": "warn",
+
+    "unicorn/filename-case": [
+      "error",
+      {
+        cases: {
+          kebabCase: true,
+          pascalCase: true,
+        },
+      },
+    ],
+    "unicorn/prevent-abbreviations": "off",
   },
 };
