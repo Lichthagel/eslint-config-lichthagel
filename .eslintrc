@@ -1,3 +1,6 @@
 {
-  "extends": ["./node.js", "plugin:n/recommended-script"]
+  "extends": ["./node.js", "plugin:n/recommended-script"],
+  "rules": {
+    "unicorn/prefer-module": "off"
+  }
 }
