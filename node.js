@@ -1,6 +1,6 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  extends: ["./index.js", "plugin:n/recommended-module"],
+  extends: ["plugin:n/recommended-module"],
   env: {
     node: true,
   },
@@ -21,5 +21,10 @@ module.exports = {
 
     "n/no-missing-import": "off",
     "n/no-missing-require": "off",
+  },
+  settings: {
+    "import/resolver": {
+      node: true,
+    },
   },
 };

@@ -15,9 +15,6 @@ module.exports = {
     "import/resolver": {
       typescript: {},
     },
-    "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"],
-    },
   },
   rules: {
     "@typescript-eslint/array-type": "error",
