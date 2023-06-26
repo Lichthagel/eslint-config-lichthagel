@@ -36,6 +36,15 @@ module.exports = {
     "no-duplicate-imports": "off",
     "no-unused-vars": "off",
     "quotes": "off",
+
     "import/no-unresolved": "off",
   },
+  overrides: [
+    {
+      files: ["*.d.ts"],
+      rules: {
+        "spaced-comment": "off",
+      },
+    },
+  ],
 };
