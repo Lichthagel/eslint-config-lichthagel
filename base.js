@@ -5,7 +5,6 @@ module.exports = {
   env: {
     es2022: true,
   },
-  plugins: ["unicorn"],
   extends: [
     "eslint:recommended",
     "plugin:promise/recommended",
