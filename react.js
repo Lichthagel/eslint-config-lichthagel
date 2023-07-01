@@ -1,10 +1,6 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  extends: [
-    "./index.js",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-  ],
+  extends: ["plugin:react/recommended", "plugin:react-hooks/recommended"],
   env: {
     browser: true,
   },
