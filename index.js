@@ -13,8 +13,8 @@ module.exports = {
     "import/export": "error",
 
     // red flags (thus, warnings)
-    "import/no-named-as-default": "warn",
-    "import/no-named-as-default-member": "off",
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "warn",
     "import/no-duplicates": "warn",
   },
 };
