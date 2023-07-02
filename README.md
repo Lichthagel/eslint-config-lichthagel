@@ -10,9 +10,19 @@ This config brings along its own plugins using `@rushstack/eslint-patch`.
 
 ## Configurations
 
-### base
+### Base
 
-Basic rules for any javascript project
+Basic rules for any JavaScript project. You should prefer using "basic".
+
+```json
+{
+  "extends": ["lichthagel/base"]
+}
+```
+
+### Basic
+
+Basic rules for any JavaScript project. Base + `eslint-plugin-import`.
 
 ```json
 {
@@ -20,15 +30,9 @@ Basic rules for any javascript project
 }
 ```
 
-### node
+### Typescript
 
-```json
-{
-  "extends": ["lichthagel/node"]
-}
-```
-
-### typescript
+Already includes "basic".
 
 `npm|yarn|pnpm i -D typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser`
 
@@ -43,7 +47,15 @@ Basic rules for any javascript project
 }
 ```
 
-### react
+### Node
+
+```json
+{
+  "extends": ["lichthagel/node"]
+}
+```
+
+### React
 
 ```json
 {
