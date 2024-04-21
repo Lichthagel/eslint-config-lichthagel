@@ -15,6 +15,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "prepack": "tsc",
     "lint": "eslint ."
   },
   "files": [
