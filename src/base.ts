@@ -2,7 +2,6 @@ import js from "@eslint/js";
 import { Linter } from "eslint";
 // import promisePlugin from "eslint-plugin-promise";
 import stylistic from "@stylistic/eslint-plugin";
-import prettierConfig from "eslint-config-prettier";
 import unicornPlugin from "eslint-plugin-unicorn";
 
 export default [
@@ -15,6 +14,8 @@ export default [
   {
     name: "stylistic/custom",
     ...stylistic.configs.customize({
+      arrowParens: true,
+      braceStyle: "1tbs",
       indent: 2,
       quotes: "double",
       quoteProps: "consistent-as-needed",
@@ -22,7 +23,6 @@ export default [
       jsx: true,
     }),
   },
-  { name: "prettier", ...prettierConfig },
   {
     name: "lichthagel/base",
     languageOptions: {
@@ -60,6 +60,8 @@ export default [
       "prefer-template": "error",
       "require-await": "warn",
       "yoda": "warn",
+
+      "@stylistic/operator-linebreak": ["error", "after"],
 
       // "promise/prefer-await-to-then": "warn",
 
