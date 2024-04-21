@@ -1,11 +1,7 @@
 {
   "name": "eslint-config-lichthagel",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "my personal eslint-config to extend on",
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint ."
-  },
   "keywords": [
     "eslint",
     "eslintconfig",
@@ -13,20 +9,48 @@
   ],
   "author": "Lichthagel",
   "license": "MIT",
-  "devDependencies": {
-    "eslint": "^8.44.0"
+  "type": "module",
+  "engines": {
+    "node": ">=16.0.0"
   },
-  "peerDependencies": {
-    "eslint": "^8.0.0"
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint ."
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./base.js": "./dist/base.js",
+    "./typescript.js": "./dist/typescript.js",
+    "./node.js": "./dist/node.js",
+    "./react.js": "./dist/react.js"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.60.1",
-    "@typescript-eslint/parser": "^5.60.1",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-import-resolver-typescript": "^3.5.5",
-    "eslint-plugin-import": "npm:eslint-plugin-i@2.27.5-3",
-    "eslint-plugin-n": "^16.0.1",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-unicorn": "^47.0.0"
+    "@eslint/js": "^9.1.1",
+    "@stylistic/eslint-plugin": "^1.7.2",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-unicorn": "^52.0.0",
+    "globals": "^15.0.0"
+  },
+  "devDependencies": {
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/eslint__js": "^8.42.3",
+    "eslint": "^9.1.0",
+    "typescript": "^5.4.5",
+    "eslint-plugin-n": "^17.2.1",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "typescript-eslint": "^7.7.0"
+  },
+  "peerDependencies": {
+    "eslint": "^9.0.0",
+    "eslint-plugin-n": "^17.2.1",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "typescript-eslint": "^7.7.0"
   }
 }
