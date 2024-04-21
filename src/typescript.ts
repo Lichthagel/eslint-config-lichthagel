@@ -21,9 +21,7 @@ export default [
       "@typescript-eslint/explicit-member-accessibility": "error",
       "@typescript-eslint/method-signature-style": "warn",
       "@typescript-eslint/no-array-constructor": "error",
-      "@typescript-eslint/no-duplicate-imports": "error",
       "default-param-last": "off",
-      "no-duplicate-imports": "off",
 
       // "import/no-unresolved": "off",
     },
