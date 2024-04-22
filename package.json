@@ -17,6 +17,7 @@
     "build": "npm run typegen && tsup --format esm,cjs --clean --dts",
     "typegen": "tsx scripts/typegen.ts",
     "prepack": "npm run build",
+    "watch": "tsup --format esm,cjs --watch",
     "lint": "eslint ."
   },
   "files": [
