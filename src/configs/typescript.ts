@@ -1,5 +1,6 @@
 import { Linter } from "eslint";
 import ts from "typescript-eslint";
+
 import { FlatConfigItemStrict } from "../types";
 
 export default [

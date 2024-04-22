@@ -1,5 +1,6 @@
 import { ESLint } from "eslint";
 import globals from "globals";
+
 import { FlatConfigItemStrict } from "../types";
 
 const react = async (): Promise<FlatConfigItemStrict[]> => {

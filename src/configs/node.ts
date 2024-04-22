@@ -1,5 +1,6 @@
 import nodePlugin from "eslint-plugin-n";
 import globals from "globals";
+
 import { FlatConfigItemStrict } from "../types";
 
 export default [

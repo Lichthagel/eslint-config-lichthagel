@@ -1,18 +1,19 @@
 import stylistic from "@stylistic/eslint-plugin";
+
 import { FlatConfigItemStrict } from "../types";
 
 export default [
   {
     name: "stylistic/custom",
     ...stylistic.configs.customize({
-      flat: true,
       arrowParens: true,
       braceStyle: "1tbs",
+      flat: true,
       indent: 2,
-      quotes: "double",
-      quoteProps: "consistent-as-needed",
-      semi: true,
       jsx: true,
+      quoteProps: "consistent-as-needed",
+      quotes: "double",
+      semi: true,
     }),
   },
   {

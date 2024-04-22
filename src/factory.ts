@@ -12,7 +12,7 @@ const lichthagel = async (
     typescript = true,
   } = options;
 
-  const config: FlatConfigItemStrict[] = [...configs.javascript, ...configs.unicorn];
+  const config: FlatConfigItemStrict[] = [...configs.javascript, ...configs.unicorn, ...configs.perfectionist];
 
   if (stylistic) {
     config.push(...configs.stylistic);

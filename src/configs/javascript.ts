@@ -1,5 +1,6 @@
 import js from "@eslint/js";
 import globals from "globals";
+
 import { FlatConfigItemStrict } from "../types";
 
 export default [
@@ -8,14 +9,14 @@ export default [
     name: "lichthagel/javascript",
     languageOptions: {
       ecmaVersion: 2022,
-      sourceType: "module",
+      globals: {
+        ...globals.es2021,
+      },
       parserOptions: {
         ecmaVersion: 2022,
         sourceType: "module",
       },
-      globals: {
-        ...globals.es2021,
-      },
+      sourceType: "module",
     },
     rules: {
       "accessor-pairs": "error",
@@ -27,8 +28,8 @@ export default [
       "dot-notation": "error",
       "eqeqeq": "error",
       "new-cap": ["error", {
-        newIsCap: true,
         capIsNew: false,
+        newIsCap: true,
         properties: true,
       }],
       "no-alert": "error",
@@ -57,8 +58,8 @@ export default [
       "no-proto": "error",
       "no-restricted-globals": [
         "error",
-        { message: "Use `globalThis` instead.", name: "global" },
-        { message: "Use `globalThis` instead.", name: "self" },
+        { name: "global", message: "Use `globalThis` instead." },
+        { name: "self", message: "Use `globalThis` instead." },
       ],
       "no-restricted-properties": [
         "error",
@@ -114,7 +115,7 @@ export default [
         ignoreDeclarationSort: true,
       }],
       "symbol-description": "error",
-      "use-isnan": ["error", { enforceForSwitchCase: true, enforceForIndexOf: true }],
+      "use-isnan": ["error", { enforceForIndexOf: true, enforceForSwitchCase: true }],
       "valid-typeof": ["error", { requireStringLiterals: true }],
       "yoda": "error",
     },

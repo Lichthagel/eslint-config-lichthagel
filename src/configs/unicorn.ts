@@ -1,4 +1,5 @@
 import unicornPlugin from "eslint-plugin-unicorn";
+
 import { FlatConfigItemStrict } from "../types";
 
 export default [
@@ -14,9 +15,9 @@ export default [
         "error",
         {
           cases: {
+            camelCase: true,
             kebabCase: true,
             pascalCase: true,
-            camelCase: true,
           },
         },
       ],
