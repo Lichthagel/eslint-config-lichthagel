@@ -9,6 +9,7 @@ export default [
   {
     name: "lichthagel/unicorn",
     rules: {
+      "unicorn/consistent-destructuring": "error",
       "unicorn/filename-case": [
         "error",
         {
