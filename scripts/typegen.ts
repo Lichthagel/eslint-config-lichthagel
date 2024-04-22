@@ -11,7 +11,7 @@ const plugins: Record<string, ESLint.Plugin> = {
   "react-hooks": await import("eslint-plugin-react-hooks").then((mod) => mod.default as ESLint.Plugin),
   ...(await import("eslint-plugin-n").then((mod) => mod.default.configs["flat/recommended-module"].plugins)),
   ...(await import("@stylistic/eslint-plugin").then((mod) => mod.default.configs["all-flat"].plugins)),
-  ...(await import("typescript-eslint").then((mod) => mod.plugin)),
+  ...(await import("typescript-eslint").then((mod) => mod.configs.recommended[0].plugins)),
   ...(await import("eslint-plugin-unicorn").then((mod) => mod.configs["flat/recommended"].plugins as Record<string, ESLint.Plugin>)),
 };
 
