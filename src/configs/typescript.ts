@@ -1,4 +1,5 @@
 import { Linter } from "eslint";
+import { FlatConfigItem } from "src/types";
 import ts from "typescript-eslint";
 
 export default [
@@ -27,4 +28,4 @@ export default [
       "@stylistic/spaced-comment": "off",
     },
   },
-] satisfies Linter.FlatConfig[] as Linter.FlatConfig[];
+] satisfies FlatConfigItem[] as FlatConfigItem[];

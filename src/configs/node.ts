@@ -1,6 +1,6 @@
-import { Linter } from "eslint";
 import nodePlugin from "eslint-plugin-n";
 import globals from "globals";
+import { FlatConfigItem } from "src/types";
 
 export default [
   nodePlugin.configs["flat/recommended-module"],
@@ -30,4 +30,4 @@ export default [
       "n/no-missing-require": "off",
     },
   },
-] satisfies Linter.FlatConfig[] as Linter.FlatConfig[];
+] satisfies FlatConfigItem[] as FlatConfigItem[];

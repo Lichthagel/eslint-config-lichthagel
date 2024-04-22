@@ -1,13 +1,13 @@
-import { Linter } from "eslint";
 import { browser, javascript, node, react, stylistic, typescript, unicorn } from "./configs";
+import { FlatConfigItem } from "./types";
 
 const lichthagel = (options: {
   browser?: boolean;
   node?: boolean;
   react?: boolean;
   typescript?: boolean;
-}): Linter.FlatConfig[] => {
-  const configs: Linter.FlatConfig[] = [...javascript, ...stylistic, ...unicorn];
+}): FlatConfigItem[] => {
+  const configs: FlatConfigItem[] = [...javascript, ...stylistic, ...unicorn];
 
   if (options.browser) {
     configs.push(...browser);

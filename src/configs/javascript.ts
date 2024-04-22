@@ -1,5 +1,6 @@
 import js from "@eslint/js";
 import globals from "globals";
+import { FlatConfigItem } from "src/types";
 
 export default [
   { name: "js/recommended", ...js.configs.recommended },
@@ -47,4 +48,4 @@ export default [
       "yoda": "warn",
     },
   },
-] satisfies import("eslint").Linter.FlatConfig[];
+] satisfies FlatConfigItem[] as FlatConfigItem[];

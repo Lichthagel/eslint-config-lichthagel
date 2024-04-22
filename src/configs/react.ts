@@ -1,7 +1,7 @@
-import { Linter } from "eslint";
 import reactPlugin from "eslint-plugin-react";
 import reactHooksPlugin from "eslint-plugin-react-hooks";
 import globals from "globals";
+import { FlatConfigItem } from "src/types";
 
 export default [
   {
@@ -45,4 +45,4 @@ export default [
       },
     },
   },
-] satisfies Linter.FlatConfig[] as Linter.FlatConfig[];
+] satisfies FlatConfigItem[] as FlatConfigItem[];

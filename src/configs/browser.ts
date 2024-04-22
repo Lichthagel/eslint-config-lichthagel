@@ -1,4 +1,5 @@
 import globals from "globals";
+import { FlatConfigItem } from "src/types";
 
 export default [
   {
@@ -12,4 +13,4 @@ export default [
       },
     },
   },
-] satisfies import("eslint").Linter.FlatConfig[];
+] satisfies FlatConfigItem[] as FlatConfigItem[];

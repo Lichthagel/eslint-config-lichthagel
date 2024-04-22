@@ -1,5 +1,5 @@
-import { Linter } from "eslint";
 import unicornPlugin from "eslint-plugin-unicorn";
+import { FlatConfigItem } from "src/types";
 
 export default [
   {
@@ -24,4 +24,4 @@ export default [
       "unicorn/prevent-abbreviations": "off",
     },
   },
-] satisfies Linter.FlatConfig[] as Linter.FlatConfig[];
+] satisfies FlatConfigItem[] as FlatConfigItem[];
