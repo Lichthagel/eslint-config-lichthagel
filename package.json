@@ -47,10 +47,24 @@
     "typescript-eslint": "^7.7.0"
   },
   "peerDependencies": {
-    "eslint": "^9.0.0",
+    "eslint": ">=8.40.0",
     "eslint-plugin-n": "^17.2.1",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "typescript-eslint": "^7.7.0"
+  },
+  "peerDependenciesMeta": {
+    "eslint-plugin-n": {
+      "optional": true
+    },
+    "eslint-plugin-react": {
+      "optional": true
+    },
+    "eslint-plugin-react-hooks": {
+      "optional": true
+    },
+    "typescript-eslint": {
+      "optional": true
+    }
   }
 }
