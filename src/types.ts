@@ -1,5 +1,5 @@
-import { Linter } from "eslint";
-import { RuleOptions } from "./typegen";
+import type { Linter } from "eslint";
+import type { RuleOptions } from "./typegen";
 
 export type Rules = RuleOptions;
 
