@@ -14,7 +14,8 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "build": "tsup --format esm,cjs --clean --dts",
+    "build": "npm run typegen && tsup --format esm,cjs --clean --dts",
+    "typegen": "tsx scripts/typegen.ts",
     "prepack": "npm run build",
     "lint": "eslint ."
   },
@@ -34,16 +35,20 @@
   "dependencies": {
     "@eslint/js": "^9.1.1",
     "@stylistic/eslint-plugin": "^2.0.0",
+    "eslint-flat-config-utils": "^0.2.3",
     "eslint-plugin-unicorn": "^53.0.0",
     "globals": "^15.0.0"
   },
   "devDependencies": {
     "@types/eslint__js": "^8.42.3",
+    "@types/node": "^20.12.7",
     "eslint": "^9.1.0",
     "eslint-plugin-n": "^17.2.1",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-typegen": "^0.2.3",
     "tsup": "^8.0.2",
+    "tsx": "^4.7.2",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.7.0"
   },

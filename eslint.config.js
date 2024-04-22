@@ -26,6 +26,12 @@ export default [
     ...ts.configs.disableTypeChecked,
   },
   {
+    files: ["src/typegen.d.ts"],
+    rules: {
+      "unicorn/no-abusive-eslint-disable": "off",
+    },
+  },
+  {
     ignores: ["dist/**/*"],
   },
 ];
