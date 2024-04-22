@@ -33,7 +33,7 @@
 
             packages = with pkgs; [
               nodejs
-              nodePackages.pnpm
+              corepack
             ];
           };
         }
