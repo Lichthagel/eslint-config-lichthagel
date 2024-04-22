@@ -5,10 +5,10 @@ import ts from "typescript-eslint";
 import lichthagel from "./dist/index.js";
 
 export default [
-  ...lichthagel({
+  ...(await lichthagel({
     node: true,
     typescript: true,
-  }),
+  })),
   {
     rules: {
       "@typescript-eslint/no-unsafe-member-access": "off",
