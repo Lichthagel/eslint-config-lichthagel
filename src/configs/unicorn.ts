@@ -20,6 +20,7 @@ export default [
           },
         },
       ],
+      "unicorn/import-style": "off",
       "unicorn/no-null": "off",
       "unicorn/no-useless-undefined": ["error", { checkArguments: false }],
       "unicorn/prevent-abbreviations": "off",
