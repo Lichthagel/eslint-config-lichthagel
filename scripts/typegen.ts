@@ -1,35 +1,22 @@
-import { Linter } from "eslint";
-import { concat } from "eslint-flat-config-utils";
-import { flatConfigsToRulesDTS } from "eslint-typegen/core";
+import { ESLint } from "eslint";
+import { pluginsToRulesDTS } from "eslint-typegen/core";
 import { builtinRules } from "eslint/use-at-your-own-risk";
 import fs from "node:fs/promises";
-import { browser, javascript, node, react, stylistic, typescript, unicorn } from "src/configs";
 
-const config = await concat<Linter.FlatConfig>(
-  {
-    plugins: {
-      "": {
-        rules: Object.fromEntries(builtinRules.entries()),
-      },
-    },
+const plugins: Record<string, ESLint.Plugin> = {
+  "": {
+    rules: Object.fromEntries(builtinRules.entries()),
   },
-  browser,
-  javascript,
-  node,
-  react,
-  stylistic,
-  typescript,
-  unicorn,
-);
+  "react": await import("eslint-plugin-react").then((mod) => mod.default as ESLint.Plugin),
+  "react-hooks": await import("eslint-plugin-react-hooks").then((mod) => mod.default as ESLint.Plugin),
+  ...(await import("eslint-plugin-n").then((mod) => mod.default.configs["flat/recommended-module"].plugins)),
+  ...(await import("@stylistic/eslint-plugin").then((mod) => mod.default.configs["all-flat"].plugins)),
+  ...(await import("typescript-eslint").then((mod) => mod.plugin)),
+  ...(await import("eslint-plugin-unicorn").then((mod) => mod.configs["flat/recommended"].plugins as Record<string, ESLint.Plugin>)),
+};
 
-const configNames = config.map((c) => c.name).filter(Boolean) as string[];
-
-const dts =
-`${await flatConfigsToRulesDTS(config, {
+const dts = await pluginsToRulesDTS(plugins, {
   includeAugmentation: true,
-})}
-// Names of all the configs
-export type ConfigNames = ${configNames.map((i) => `'${i}'`).join(" | ")}
-`;
+});
 
 await fs.writeFile("src/typegen.d.ts", dts, "utf8");
