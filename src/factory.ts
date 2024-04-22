@@ -1,33 +1,40 @@
-import { browser, javascript, node, react, stylistic, typescript, unicorn } from "./configs";
-import { FlatConfigItemStrict } from "./types";
+import * as configs from "./configs";
+import { FlatConfigItemStrict, OptionsConfig } from "./types";
 
 const lichthagel = async (
-  options: {
-    browser?: boolean;
-    node?: boolean;
-    react?: boolean;
-    typescript?: boolean;
-  },
+  options: OptionsConfig = {},
 ): Promise<FlatConfigItemStrict[]> => {
-  const configs: FlatConfigItemStrict[] = [...javascript, ...stylistic, ...unicorn];
+  const {
+    browser = false,
+    node = false,
+    react = false,
+    stylistic = true,
+    typescript = true,
+  } = options;
 
-  if (options.browser) {
-    configs.push(...browser);
+  const config: FlatConfigItemStrict[] = [...configs.javascript, ...configs.unicorn];
+
+  if (stylistic) {
+    config.push(...configs.stylistic);
   }
 
-  if (options.node) {
-    configs.push(...node);
+  if (browser) {
+    config.push(...configs.browser);
   }
 
-  if (options.typescript) {
-    configs.push(...typescript);
+  if (node) {
+    config.push(...configs.node);
   }
 
-  if (options.react) {
-    configs.push(...(await react()));
+  if (typescript) {
+    config.push(...configs.typescript);
   }
 
-  return configs;
+  if (react) {
+    config.push(...(await configs.react()));
+  }
+
+  return config;
 };
 
 export default lichthagel;
