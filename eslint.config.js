@@ -2,12 +2,13 @@
 import path from "node:path";
 import url from "node:url";
 import ts from "typescript-eslint";
-import node from "./dist/node.js";
-import typescript from "./dist/typescript.js";
+import lichthagel from "./dist/index.js";
 
 export default [
-  ...typescript,
-  ...node,
+  ...lichthagel({
+    node: true,
+    typescript: true,
+  }),
   {
     rules: {
       "@typescript-eslint/no-unsafe-member-access": "off",

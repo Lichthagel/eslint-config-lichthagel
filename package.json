@@ -14,8 +14,8 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "build": "tsc",
-    "prepack": "tsc",
+    "build": "tsup --format esm,cjs --clean --dts",
+    "prepack": "npm run build",
     "lint": "eslint ."
   },
   "files": [
@@ -40,10 +40,11 @@
   "devDependencies": {
     "@types/eslint__js": "^8.42.3",
     "eslint": "^9.1.0",
-    "typescript": "^5.4.5",
     "eslint-plugin-n": "^17.2.1",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
     "typescript-eslint": "^7.7.0"
   },
   "peerDependencies": {

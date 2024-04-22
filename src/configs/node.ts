@@ -1,4 +1,4 @@
-import type { Linter } from "eslint";
+import { Linter } from "eslint";
 import nodePlugin from "eslint-plugin-n";
 import globals from "globals";
 
@@ -28,11 +28,6 @@ export default [
 
       "n/no-missing-import": "off",
       "n/no-missing-require": "off",
-    },
-    settings: {
-      "import/resolver": {
-        node: true,
-      },
     },
   },
 ] satisfies Linter.FlatConfig[] as Linter.FlatConfig[];
