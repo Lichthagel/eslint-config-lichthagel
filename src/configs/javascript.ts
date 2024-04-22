@@ -1,6 +1,6 @@
 import js from "@eslint/js";
 import globals from "globals";
-import { FlatConfigItem } from "src/types";
+import { FlatConfigItemStrict } from "../types";
 
 export default [
   { name: "js/recommended", ...js.configs.recommended },
@@ -48,4 +48,4 @@ export default [
       "yoda": "warn",
     },
   },
-] satisfies FlatConfigItem[] as FlatConfigItem[];
+] satisfies FlatConfigItemStrict[] as FlatConfigItemStrict[];

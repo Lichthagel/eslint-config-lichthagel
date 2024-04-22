@@ -1,6 +1,6 @@
 import nodePlugin from "eslint-plugin-n";
 import globals from "globals";
-import { FlatConfigItem } from "src/types";
+import { FlatConfigItemStrict } from "../types";
 
 export default [
   nodePlugin.configs["flat/recommended-module"],
@@ -30,4 +30,4 @@ export default [
       "n/no-missing-require": "off",
     },
   },
-] satisfies FlatConfigItem[] as FlatConfigItem[];
+] satisfies FlatConfigItemStrict[] as FlatConfigItemStrict[];

@@ -1,5 +1,5 @@
 import stylistic from "@stylistic/eslint-plugin";
-import { FlatConfigItem } from "src/types";
+import { FlatConfigItemStrict } from "../types";
 
 export default [
   {
@@ -21,4 +21,4 @@ export default [
       "@stylistic/operator-linebreak": ["error", "after"],
     },
   },
-] satisfies FlatConfigItem[] as FlatConfigItem[];
+] satisfies FlatConfigItemStrict[] as FlatConfigItemStrict[];

@@ -1,5 +1,5 @@
 import unicornPlugin from "eslint-plugin-unicorn";
-import { FlatConfigItem } from "src/types";
+import { FlatConfigItemStrict } from "../types";
 
 export default [
   {
@@ -24,4 +24,4 @@ export default [
       "unicorn/prevent-abbreviations": "off",
     },
   },
-] satisfies FlatConfigItem[] as FlatConfigItem[];
+] satisfies FlatConfigItemStrict[] as FlatConfigItemStrict[];

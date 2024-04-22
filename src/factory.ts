@@ -1,5 +1,5 @@
 import { browser, javascript, node, react, stylistic, typescript, unicorn } from "./configs";
-import { FlatConfigItem } from "./types";
+import { FlatConfigItemStrict } from "./types";
 
 const lichthagel = async (
   options: {
@@ -8,8 +8,8 @@ const lichthagel = async (
     react?: boolean;
     typescript?: boolean;
   },
-): Promise<FlatConfigItem[]> => {
-  const configs: FlatConfigItem[] = [...javascript, ...stylistic, ...unicorn];
+): Promise<FlatConfigItemStrict[]> => {
+  const configs: FlatConfigItemStrict[] = [...javascript, ...stylistic, ...unicorn];
 
   if (options.browser) {
     configs.push(...browser);

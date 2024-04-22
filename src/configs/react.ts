@@ -1,20 +1,20 @@
 import { ESLint } from "eslint";
 import globals from "globals";
-import { FlatConfigItem } from "src/types";
+import { FlatConfigItemStrict } from "../types";
 
-const react = async (): Promise<FlatConfigItem[]> => {
+const react = async (): Promise<FlatConfigItemStrict[]> => {
   const pluginReact = await import("eslint-plugin-react").then((mod) => mod.default as ESLint.Plugin);
   const pluginReactHooks = await import("eslint-plugin-react-hooks").then((mod) => mod.default as ESLint.Plugin);
 
   return [
     {
       name: "react/recommended",
-      ...(pluginReact.configs as Record<string, FlatConfigItem[]>).recommended,
+      ...(pluginReact.configs as Record<string, FlatConfigItemStrict[]>).recommended,
       plugins: { react: pluginReact },
     },
     {
       name: "react-hooks/recommended",
-      ...(pluginReactHooks.configs as Record<string, FlatConfigItem[]>).recommended,
+      ...(pluginReactHooks.configs as Record<string, FlatConfigItemStrict[]>).recommended,
       plugins: { "react-hooks": pluginReactHooks },
     },
     {
@@ -48,7 +48,7 @@ const react = async (): Promise<FlatConfigItem[]> => {
         },
       },
     },
-  ] satisfies FlatConfigItem[] as FlatConfigItem[];
+  ] satisfies FlatConfigItemStrict[] as FlatConfigItemStrict[];
 };
 
 export default react;

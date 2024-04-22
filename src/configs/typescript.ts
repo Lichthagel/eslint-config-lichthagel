@@ -1,6 +1,6 @@
 import { Linter } from "eslint";
-import { FlatConfigItem } from "src/types";
 import ts from "typescript-eslint";
+import { FlatConfigItemStrict } from "../types";
 
 export default [
   ...(ts.configs.recommendedTypeChecked as Linter.FlatConfig[]),
@@ -28,4 +28,4 @@ export default [
       "@stylistic/spaced-comment": "off",
     },
   },
-] satisfies FlatConfigItem[] as FlatConfigItem[];
+] satisfies FlatConfigItemStrict[] as FlatConfigItemStrict[];

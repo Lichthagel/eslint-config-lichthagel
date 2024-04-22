@@ -1,5 +1,5 @@
 import globals from "globals";
-import { FlatConfigItem } from "src/types";
+import { FlatConfigItemStrict } from "../types";
 
 export default [
   {
@@ -13,4 +13,4 @@ export default [
       },
     },
   },
-] satisfies FlatConfigItem[] as FlatConfigItem[];
+] satisfies FlatConfigItemStrict[] as FlatConfigItemStrict[];
