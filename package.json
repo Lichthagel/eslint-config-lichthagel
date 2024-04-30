@@ -14,11 +14,12 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "build": "npm run typegen && tsup --format esm,cjs --clean --dts",
+    "build": "pnpm run typegen && tsup --format esm,cjs --clean --dts",
     "typegen": "tsx scripts/typegen.ts",
-    "prepack": "npm run build",
+    "prepack": "pnpm run build",
     "watch": "tsup --format esm,cjs --watch",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "inspect": "pnpx @eslint/config-inspector"
   },
   "files": [
     "dist",
