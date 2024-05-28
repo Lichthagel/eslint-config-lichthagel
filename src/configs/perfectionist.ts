@@ -10,14 +10,17 @@ export default [
   {
     name: "lichthagel/perfectionist",
     rules: {
-      "perfectionist/sort-objects": ["error", {
-        "custom-groups": {
-          id: ["id", "name"],
+      "perfectionist/sort-objects": [
+        "error",
+        {
+          "custom-groups": {
+            id: ["id", "name"],
+          },
+          "groups": ["id", "unknown"],
+          "partition-by-comment": true,
+          "partition-by-new-line": true,
         },
-        "groups": ["id", "unknown"],
-        "partition-by-comment": true,
-        "partition-by-new-line": true,
-      }],
+      ],
     },
   },
 ] satisfies FlatConfigItemStrict[] as FlatConfigItemStrict[];

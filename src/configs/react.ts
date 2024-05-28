@@ -27,10 +27,7 @@ const react = async (): Promise<FlatConfigItemStrict[]> => {
       },
       rules: {
         "react/destructuring-assignment": "warn",
-        "react/function-component-definition": [
-          "warn",
-          { namedComponents: "arrow-function" },
-        ],
+        "react/function-component-definition": ["warn", { namedComponents: "arrow-function" }],
         "react/jsx-boolean-value": "warn",
         "react/jsx-filename-extension": [1, { extensions: [".jsx", ".tsx"] }],
         "react/no-array-index-key": "warn",

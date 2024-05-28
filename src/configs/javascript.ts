@@ -27,11 +27,14 @@ export default [
       "default-case-last": "error",
       "dot-notation": "error",
       "eqeqeq": "error",
-      "new-cap": ["error", {
-        capIsNew: false,
-        newIsCap: true,
-        properties: true,
-      }],
+      "new-cap": [
+        "error",
+        {
+          capIsNew: false,
+          newIsCap: true,
+          properties: true,
+        },
+      ],
       "no-alert": "error",
       "no-array-constructor": "error",
       "no-await-in-loop": "error",
@@ -56,11 +59,7 @@ export default [
       "no-octal-escape": "error",
       "no-promise-executor-return": ["error", { allowVoid: true }],
       "no-proto": "error",
-      "no-restricted-globals": [
-        "error",
-        { name: "global", message: "Use `globalThis` instead." },
-        { name: "self", message: "Use `globalThis` instead." },
-      ],
+      "no-restricted-globals": ["error", { name: "global", message: "Use `globalThis` instead." }, { name: "self", message: "Use `globalThis` instead." }],
       "no-restricted-properties": [
         "error",
         { message: "Use `Object.getPrototypeOf` or `Object.setPrototypeOf` instead.", property: "__proto__" },
@@ -86,7 +85,7 @@ export default [
       "no-unneeded-ternary": "error",
       "no-unreachable-loop": "error",
       "no-unused-expressions": ["error", { allowShortCircuit: true, allowTaggedTemplates: true, allowTernary: true }],
-      "no-use-before-define": ["error"],
+      "no-use-before-define": "error",
       "no-useless-call": "error",
       "no-useless-computed-key": "error",
       "no-useless-concat": "error",
@@ -97,10 +96,7 @@ export default [
       "object-shorthand": ["error", "always", { ignoreConstructors: false }],
       "prefer-arrow-callback": "error",
       "prefer-const": "error",
-      "prefer-destructuring": [
-        "error",
-        { AssignmentExpression: { array: false, object: false } },
-      ],
+      "prefer-destructuring": ["error", { AssignmentExpression: { array: false, object: false } }],
       "prefer-exponentiation-operator": "error",
       "prefer-object-spread": "error",
       "prefer-promise-reject-errors": "error",
@@ -109,11 +105,14 @@ export default [
       "prefer-spread": "error",
       "prefer-template": "error",
       "require-await": "error",
-      "sort-imports": ["error", {
-        allowSeparatedGroups: true,
-        ignoreCase: false,
-        ignoreDeclarationSort: true,
-      }],
+      "sort-imports": [
+        "error",
+        {
+          allowSeparatedGroups: true,
+          ignoreCase: false,
+          ignoreDeclarationSort: true,
+        },
+      ],
       "symbol-description": "error",
       "use-isnan": ["error", { enforceForIndexOf: true, enforceForSwitchCase: true }],
       "valid-typeof": ["error", { requireStringLiterals: true }],
