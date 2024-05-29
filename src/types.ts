@@ -44,6 +44,13 @@ export type OptionsConfig = {
   stylistic?: boolean;
 
   /**
+   * Enable Svelte-specific rules.
+   *
+   * @default false
+   */
+  svelte?: boolean;
+
+  /**
    * Enable TypeScript-specific rules.
    *
    * @default true

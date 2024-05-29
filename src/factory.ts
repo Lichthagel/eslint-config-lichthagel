@@ -9,6 +9,7 @@ const lichthagel = async (
     node = false,
     react = false,
     stylistic = true,
+    svelte = false,
     typescript = true,
   } = options;
 
@@ -32,6 +33,10 @@ const lichthagel = async (
 
   if (react) {
     config.push(...(await configs.react()));
+  }
+
+  if (svelte) {
+    config.push(...(await configs.svelte({ disableStylistic: stylistic, withTypescript: typescript })));
   }
 
   return config;
