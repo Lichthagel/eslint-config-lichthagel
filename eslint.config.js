@@ -5,6 +5,7 @@ import ts from "typescript-eslint";
 
 import lichthagel from "./dist/index.js";
 
+/** @type {import("./dist/index.js").FlatConfigItem[]} */
 export default [
   ...(await lichthagel({
     node: true,
@@ -24,7 +25,7 @@ export default [
   },
   {
     files: ["eslint.config.js"],
-    ...ts.configs.disableTypeChecked,
+    ...(/** @type {import("eslint").Linter.FlatConfig} */ (ts.configs.disableTypeChecked)),
   },
   {
     files: ["src/typegen.d.ts"],
