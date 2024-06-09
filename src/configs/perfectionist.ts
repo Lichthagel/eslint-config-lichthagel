@@ -10,15 +10,22 @@ export default [
   {
     name: "lichthagel/perfectionist",
     rules: {
+      "perfectionist/sort-object-types": "off",
       "perfectionist/sort-objects": [
-        "error",
+        "off",
         {
           "custom-groups": {
-            id: ["id", "name"],
+            id: ["id", "name", "slug"],
           },
           "groups": ["id", "unknown"],
           "partition-by-comment": true,
           "partition-by-new-line": true,
+        },
+      ],
+      "perfectionist/sort-union-types": [
+        "error",
+        {
+          "nullable-last": true,
         },
       ],
     },
