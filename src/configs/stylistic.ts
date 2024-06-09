@@ -27,7 +27,7 @@ export default [
       "@stylistic/function-call-spacing": ["error", "never"],
       "@stylistic/function-paren-newline": ["error", "multiline-arguments"],
       "@stylistic/generator-star-spacing": ["error", { after: false, before: true }],
-      "@stylistic/implicit-arrow-linebreak": ["error", "beside"],
+      "@stylistic/implicit-arrow-linebreak": ["off", "beside"],
       "@stylistic/lines-around-comment": [
         "error",
         {
